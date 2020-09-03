@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Renteria Counseling Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    {% include google-analytics.html %}
+    {% include scripts.html %}
+    {% include styles.html %}
+</head>
+
+
+<body>
+    {% include header.html %}
+    {% include navbar.html %}
+    {% include banner.html %}
+
+    <div id="main">
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+</body>
+
+</html>

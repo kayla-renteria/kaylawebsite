@@ -1,0 +1,528 @@
+/*Header*/
+
+* {
+    box-sizing: border-box;
+}
+
+/*navigation*/
+    
+.main_header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background: url(../images/water700.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    height: 15%;
+}
+
+img.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-top: 2px;
+    width: 100%;
+    margin: auto;
+
+}
+
+.pos-f-t {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: rgb(33, 87, 119);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'cambria';
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: .5em;
+    text-align: center;
+}
+
+.navbar-brand,
+.navbar-nav a {
+  font-family: 'cambria';
+}
+
+
+
+/*Banner*/
+
+.banner {
+    margin: auto;
+    color: rgb(90, 88, 88);
+    font-size: 15px;
+    font-family: 'cambria';
+    margin: 0 auto;
+    margin-top: .5em;
+    text-align: center;
+}
+
+
+
+/*Body Styles*/
+
+.about_container, .container_2, .kayla_container, .form, .about {
+    margin: auto;
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 95%;
+    margin-bottom: 25px;
+    margin-top: 35px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.about, .about_kayla, .item_5 {
+    color: rgb(90, 88, 88);
+    font-family: 'cambria';
+    padding: 15px;
+    border-radius: 20px;
+    margin: auto;
+    margin: 10px;
+    margin: 5px;
+    max-width: 95%;
+    text-align: center;
+    font-size: 15px;
+}
+
+p, p.intro {
+    font-size: 15px;
+}
+
+.new {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+ }
+
+.new2 {
+    display: flex;
+    align-items: center;
+    font-family: 'times new roman';
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(33, 87, 119);
+    color: white;
+    border-radius: 10px;
+    padding-right: 150px;
+    padding-bottom: 25px;
+    flex-direction: column;
+    width: 95%;
+}
+
+.location {
+    margin-top: 35px;
+    margin-left: 150px;
+    text-align: center;
+    width: 100%;
+}
+
+.about_image,  .item_3 {
+    border-radius: 20px;
+    margin: auto;
+    padding-top: 45px;
+    padding-left: 25px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.office {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-radius: 20px;
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 35px;
+}
+
+.intro {
+    display: flex;
+    min-width: 50%;
+}
+
+.intro:first-line {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 35px;
+    color: rgb(90, 88, 88);
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about_kayla {
+    min-width: 50%;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+
+.right {
+    color: rgb(90, 88, 88);
+    font-family: 'times new roman';
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 20px;
+    margin: auto;
+    max-width: 85%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.soon{
+    color: rgb(33, 87, 119);
+    font-family: 'cambria';
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    margin: auto;
+    min-width: 400px;
+    max-width: 85%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 35px;  
+}
+
+.faq {
+   color: rgb(33, 87, 119);
+   font-family: 'times new roman';
+   font-weight: bold;
+   font-size: 20px;
+   padding: 2px;    
+   padding-bottom: 5px;
+   min-height: 30px;
+   min-width: 85%;
+   text-align: left;
+   margin-left: 35px;
+}
+
+.margin {
+    margin: 35px;
+}
+
+.card-body {
+    max-width: 85%;
+    text-align: center;
+    font-family: 'cambria';
+    color: rgb(90, 88, 88);
+    margin: auto;
+    font-size: 20px;
+}
+
+.insurance {
+    text-align: center;
+}
+
+#time {
+    margin-bottom: 35px;
+}
+
+#method {
+    margin-bottom: 35px;
+}
+
+.end {
+    margin-bottom: 55px;
+}
+
+.blue {
+    font-weight: normal;
+    font-family: 'cambria';
+    font-size: 15px;
+} 
+
+/*Images*/
+
+.hand {
+    width: 80%;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    align-self: center;
+}
+
+.profile_2, .outstretched {
+    max-width: 95%;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+}
+
+.profile {
+    border-radius: 10px;
+    margin: auto;
+    max-width: 95%;
+    display: flex;
+}
+
+
+/*Form*/
+
+.form_title {
+    margin-bottom: 35px;
+}
+
+form {
+    margin: auto;
+    margin-top: 35px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(33, 87, 119);
+    align-content: center;
+    align-self: center;
+    max-width: 95%;
+    min-width: 60%;
+    background: rgb(193, 198, 250);
+    border-radius: 10px;
+    margin-bottom: 55px;
+    font-family: 'times new roman';
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.contact_info {
+    align-self: center;
+    font-family: 'times new roman';
+    font-weight: bold;
+    font-size: 20px;
+    min-width: 90%;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.preferred_method, .time {
+    flex-direction: column;
+    padding: 10px;
+    align-self: center;
+}
+
+input {
+    align-self: center;
+}
+
+.text {
+    min-width: 70%;
+}
+
+.select {
+    max-width: 75%;
+    min-width: 60%;
+    align-self: center;
+}
+
+/*Buttons*/
+
+button {
+    width: 100px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background: rgb(33, 87, 119);
+    color: white;
+    border-radius: 5px;
+/*  height: 45px;*/
+    text-align: center;
+    cursor: pointer;
+    padding: 3px;
+    margin: auto;
+}   
+
+.appointment {
+    min-width: 165px;
+    min-height: 85px;
+    color: white;
+    font-weight: bold;
+    font-family: 'times new roman';
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+.appointment a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*footer*/
+footer {
+    background: url(../images/theugly2.jpg);     
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 225px;
+    min-height: 75px;
+    color: white;
+    font-family: 'Times New Roman';
+    font-size: 15px;
+    line-height: .25;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    padding-top: 15px;
+    }
+
+.address {
+    margin-top: 25px;
+}
+
+.contact {
+    margin-top: 25px;
+}
+
+/*media queries*/
+@media(min-width: 1200px) {
+
+    .main_header {
+        height: 40%;
+    }
+
+    .about_container, .container_2, .kayla_container, .form, .about .about_kayla, .item_5  {
+        font-family: 'cambria';
+        font-size: 20px;
+    }
+
+    img.logo {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: center;
+        align-self: center;
+        margin-top: 2px;
+        width: 75%;
+      
+    }
+    
+    .banner {
+        margin: auto;
+        margin-top: 25px;
+        color: rgb(90, 88, 88);
+        font-size: 23px;
+        font-family: 'cambria';
+        margin: 0 auto;
+        margin-top: .5em;
+        text-align: center;
+    }
+
+    .about {
+        font-family: 'cambria';
+        font-size: 20px;
+    }
+
+    .about_container  {
+        font-family: 'cambria';
+        flex-direction: row-reverse;
+        font-size: 20px;
+    }
+
+    .container_2 {
+        flex-direction: row;
+        font-size: 20px;
+    }
+
+    .kayla_container, .ptsd, .cbt {
+        display: flex;
+        flex-direction: row-reverse;
+        font-size: 20px;
+    }
+
+    .about_kayla{
+        max-width: 55%;
+    }
+
+    p, p.intro {
+        font-size: 20px;
+    }
+
+    .address, .contact {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .about_container {
+        flex-direction: row;
+    }
+
+    .hand {
+        max-width: 60%;
+        margin-bottom: 35px;
+    }
+
+    .contact {
+        margin-top: 25px;
+    }
+
+    .new2 {
+        flex-direction: row;
+        font-size: 20px;
+    }
+
+    .location {
+        text-align: left;
+    }
+
+    .blue {
+        font-size: 20px;
+        font-weight: normal;
+    }
+    
+
+}
+    
