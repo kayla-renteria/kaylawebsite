@@ -1,0 +1,29 @@
+navigation:
+  - text: Home
+    href: index.html
+  - text: About Kayla
+    href: about-kayla.html
+  - text: Counseing Services
+    children:
+      - text: Trauma Treatment
+        href: trauma.html
+      - text: Depression and Anxiety
+        href: depression.html
+      - text: Adolescents in Therapy
+        href: adolescents.html
+  - text: Client Resources
+    children: 
+      - text: FAQ
+        href: faq.html
+      - text: Client Portal
+        href: client-portal.html
+      - text: Insurance and Rates
+        href: insurance.html
+  - text: Contact Me
+    href: hours.html
+  - text: Blog
+    href: https://renteriacounseling.blogspot.com/
+    options:
+      - new-page
+
+     
