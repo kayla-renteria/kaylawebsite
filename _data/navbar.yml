@@ -3,7 +3,7 @@ navigation:
     href: index.html
   - text: About Kayla
     href: about-kayla.html
-  - text: Counseing Services
+  - text: Counseling Services
     children:
       - text: Trauma Treatment
         href: trauma.html
@@ -11,6 +11,10 @@ navigation:
         href: depression.html
       - text: Adolescents in Therapy
         href: adolescents.html
+      - text: Telehealth
+        href: telehealth.html
+  - text: Supervision and Consultation Services
+    href: supervision-and-consultation.html
   - text: Client Resources
     children: 
       - text: FAQ
@@ -26,4 +30,3 @@ navigation:
     options:
       - new-page
 
-     
