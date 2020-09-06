@@ -70,18 +70,16 @@ body {
     align-items: center;
     flex-direction: column;
     max-width: 95%;
-    margin: 35px auto 25px;
+    margin: 1px auto 25px;
     font-size: 15px;
     text-align: center;
 }
 
 .about, .about_kayla, .item_5 {
     color: rgb(90, 88, 88);
-    font-family: 'cambria';
+    font-family: 'cambria', serif;
     padding: 15px;
     border-radius: 20px;
-    margin: auto;
-    margin: 10px;
     margin: 5px;
     max-width: 95%;
     text-align: center;
@@ -160,7 +158,7 @@ h2 {
     text-align: center;
     font-weight: bold;
     font-size: 35px;
-    margin-top: 35px;
+    margin-top: 20px;
     color: rgb(90, 88, 88);
 }
 
@@ -279,62 +277,6 @@ h3 {
     display: flex;
 }
 
-
-/*Form*/
-
-.form_title {
-    margin-bottom: 35px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    color: rgb(33, 87, 119);
-    align-content: center;
-    align-self: center;
-    max-width: 95%;
-    min-width: 60%;
-    background: rgb(193, 198, 250);
-    border-radius: 10px;
-    margin: 35px auto 55px;
-    font-family: 'times new roman', serif;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px 10px 35px;
-}
-
-.contact_info {
-    align-self: center;
-    font-family: 'times new roman', serif;
-    font-weight: bold;
-    font-size: 20px;
-    min-width: 90%;
-    max-width: 95%;
-    display: flex;
-    flex-direction: column;
-}
-
-.preferred_method, .time {
-    flex-direction: column;
-    padding: 10px;
-    align-self: center;
-}
-
-input {
-    align-self: center;
-}
-
-.text {
-    min-width: 70%;
-}
-
-.select {
-    max-width: 75%;
-    min-width: 60%;
-    align-self: center;
-}
-
 /*Buttons*/
 
 button {
@@ -374,6 +316,13 @@ button {
     justify-content: center;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.centered-flex-row {
+    display: inline-flex;
+    width: auto;
+    align-items: center;
+    margin-top: 15px;
 }
 
 /*footer*/
