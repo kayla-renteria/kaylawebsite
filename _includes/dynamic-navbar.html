@@ -10,7 +10,12 @@
         <ul class="navbar-nav mr-auto">
             {%- for nav-item in nav-data -%}
             {%- if nav-item.children != null -%}
-            <li class="nav-item dropdown">
+            {%- assign class='nav-item dropdown' -%}
+            {%- assign active-page = nav-item.children | where: "href", page.url -%}
+            {%- if active-page != empty -%}
+            {%- assign class='nav-item dropdown active' -%}
+            {%- endif -%}
+            <li class="{{- class -}}">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">{{ nav-item.text }}</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,3 +45,4 @@
         </ul>
     </div>
 </nav>
+<!-- End navigation -->
