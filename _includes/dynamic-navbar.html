@@ -1,38 +1,43 @@
-{% assign nav-data = site.data.navbar.navigation %}
+{%- assign nav-data = site.data.navbar.navigation -%}
+<!--{%- assign current-page = (page.url |split: /)[1] -%}-->
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            {% for nav-item in nav-data %}
-            {% if nav-item.children != null %}
+            {%- for nav-item in nav-data -%}
+            {%- if nav-item.children != null -%}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">{{ nav-item.text }}</a>
+                   aria-haspopup="true" aria-expanded="false">{{ nav-item.text }}</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    {% for child in nav-item.children %}
-                    {% assign target='_self' %}
-                    {% if child.options != null and child.options contains 'new-page' %}
-                    {% assign target='_blank' %}
-                    {% endif %}
-                    <a class="dropdown-item" target="{{target}}" href="{{child.href}}">{{child.text}}</a>
-                    {% endfor %}
+                    {%- for child in nav-item.children -%}
+                    {%- assign options='' -%}
+                    {%- if child.options != null and child.options contains 'new-page' -%}
+                    {%- assign options='target="_blank" -%}
+                    {%- endif -%}
+                    <a class="dropdown-item" {{ options }} href="{{ child.href }}">{{ child.text }}</a>
+                    {%- endfor -%}
                 </div>
             </li>
-            {% else %}
-            <li class="nav-item">
-                {% assign target='_self' %}
-                {% if nav-item.options != null and nav-item.options contains 'new-page' %}
-                {% assign target='_blank' %}
-                {% endif %}
-                <a class="nav-link" target="{{target}}" href="{{nav-item.href}}">{{nav-item.text}}</a>
+            {%- else -%}
+            {%- assign class='nav-item' -%}
+            {%- if nav-item.href == page.url -%}
+            {%- assign class='nav-item active' -%}
+            {%- endif -%}
+            <li class="{{class}}">
+                {%- assign options='' -%}
+                {%- if nav-item.options != null and nav-item.options contains 'new-page' -%}
+                {%- assign options='target="_blank" -%}
+                {%- endif -%}
+                <a class="nav-link" {{ options }} href="{{nav-item.href}}">{{nav-item.text}}</a>
             </li>
-            {% endif %}
-            {% endfor %}
+            {%- endif -%}
+            {%- endfor -%}
         </ul>
     </div>
 </nav>

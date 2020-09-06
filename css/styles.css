@@ -5,15 +5,13 @@
 }
 
 /*navigation*/
-    
 .main_header {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-content: center;
-    background: url(../images/water700.jpg); 
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background: url(/images/water700.jpg) no-repeat;
     border-radius: 5px;
     height: 15%;
 }
@@ -24,10 +22,8 @@ img.logo {
     align-items: center;
     align-content: center;
     align-self: center;
-    margin-top: 2px;
     width: 100%;
     margin: auto;
-
 }
 
 .pos-f-t {
@@ -38,38 +34,34 @@ h1 {
     color: rgb(33, 87, 119);
     font-size: 25px;
     font-weight: bold;
-    font-family: 'cambria';
+    font-family: 'cambria', serif;
     max-width: 90%;
-    margin: 0 auto;
-    margin-top: .5em;
+    margin: .5em auto 0;
     text-align: center;
 }
 
 .navbar-brand,
 .navbar-nav a {
-  font-family: 'cambria';
+    font-family: 'cambria', serif;
 }
 
 
-
 /*Banner*/
-
 .banner {
-    margin: auto;
     color: rgb(90, 88, 88);
     font-size: 15px;
-    font-family: 'cambria';
-    margin: 0 auto;
-    margin-top: .5em;
+    font-family: 'cambria', serif;
+    margin: .5em auto 0;
     text-align: center;
 }
 
 
-
 /*Body Styles*/
+body {
+    margin: 0px;
+}
 
 .about_container, .container_2, .kayla_container, .form, .about {
-    margin: auto;
     background: white;
     border-radius: 25px;
     display: flex;
@@ -78,8 +70,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     max-width: 95%;
-    margin-bottom: 25px;
-    margin-top: 35px;
+    margin: 35px auto 25px;
     font-size: 15px;
     text-align: center;
 }
@@ -108,12 +99,12 @@ p, p.intro {
     align-content: center;
     align-items: center;
     margin-bottom: 35px;
- }
+}
 
 .new2 {
     display: flex;
     align-items: center;
-    font-family: 'times new roman';
+    font-family: 'times new roman', serif;
     text-align: left;
     font-size: 15px;
     font-weight: bold;
@@ -133,17 +124,15 @@ p, p.intro {
     width: 100%;
 }
 
-.about_image,  .item_3 {
+.about_image, .item_3 {
     border-radius: 20px;
-    margin: auto;
     padding-top: 45px;
     padding-left: 25px;
     align-self: center;
     display: flex;
     justify-content: center;
     max-width: 90%;
-    margin-bottom: 20px;
-    display: flex;
+    margin: auto auto 20px;
     flex-direction: column;
     align-items: center;
 }
@@ -154,8 +143,7 @@ p, p.intro {
     flex-direction: row;
     border-radius: 20px;
     max-width: 90%;
-    margin: auto;
-    margin-bottom: 35px;
+    margin: auto auto 35px;
 }
 
 .intro {
@@ -166,7 +154,7 @@ p, p.intro {
 .intro:first-line {
     font-weight: bold;
     font-size: 25px;
-  }
+}
 
 h2 {
     text-align: center;
@@ -192,49 +180,44 @@ h3 {
 
 .right {
     color: rgb(90, 88, 88);
-    font-family: 'times new roman';
+    font-family: 'times new roman', serif;
     font-size: 25px;
     padding: 15px;
     border-radius: 20px;
-    margin: auto;
     max-width: 85%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
-    margin-bottom: 35px;
+    margin: 25px auto 35px;
 }
 
-.soon{
+.soon {
     color: rgb(33, 87, 119);
-    font-family: 'cambria';
+    font-family: 'cambria', serif;
     font-weight: bold;
     font-size: 20px;
     padding: 15px;
     border-radius: 20px;
-    margin: auto;
     min-width: 400px;
     max-width: 85%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 35px;
-    margin-bottom: 35px;  
+    margin: 35px auto;
 }
 
 .faq {
-   color: rgb(33, 87, 119);
-   font-family: 'times new roman';
-   font-weight: bold;
-   font-size: 20px;
-   padding: 2px;    
-   padding-bottom: 5px;
-   min-height: 30px;
-   min-width: 85%;
-   text-align: left;
-   margin-left: 35px;
+    color: rgb(33, 87, 119);
+    font-family: 'times new roman', serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2px 2px 5px;
+    min-height: 30px;
+    min-width: 85%;
+    text-align: left;
+    margin-left: 35px;
 }
 
 .margin {
@@ -268,9 +251,9 @@ h3 {
 
 .blue {
     font-weight: normal;
-    font-family: 'cambria';
+    font-family: 'cambria', serif;
     font-size: 15px;
-} 
+}
 
 /*Images*/
 
@@ -304,9 +287,6 @@ h3 {
 }
 
 form {
-    margin: auto;
-    margin-top: 35px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     color: rgb(33, 87, 119);
@@ -316,17 +296,17 @@ form {
     min-width: 60%;
     background: rgb(193, 198, 250);
     border-radius: 10px;
-    margin-bottom: 55px;
-    font-family: 'times new roman';
+    margin: 35px auto 55px;
+    font-family: 'times new roman', serif;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
-    padding-bottom: 35px;
+    padding: 10px 10px 35px;
 }
 
 .contact_info {
     align-self: center;
-    font-family: 'times new roman';
+    font-family: 'times new roman', serif;
     font-weight: bold;
     font-size: 20px;
     min-width: 90%;
@@ -365,19 +345,19 @@ button {
     background: rgb(33, 87, 119);
     color: white;
     border-radius: 5px;
-/*  height: 45px;*/
+    /*  height: 45px;*/
     text-align: center;
     cursor: pointer;
     padding: 3px;
     margin: auto;
-}   
+}
 
 .appointment {
     min-width: 165px;
     min-height: 85px;
     color: white;
     font-weight: bold;
-    font-family: 'times new roman';
+    font-family: 'times new roman', serif;
     border-radius: 10px;
     display: flex;
     text-align: center;
@@ -398,14 +378,12 @@ button {
 
 /*footer*/
 footer {
-    background: url(../images/theugly2.jpg);     
-    width: 100%;
-    background-repeat: no-repeat;
+    background: url(/images/theugly2.jpg) no-repeat;
     background-size: cover;
     max-height: 225px;
     min-height: 75px;
     color: white;
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', serif;
     font-size: 15px;
     line-height: .25;
     display: flex;
@@ -416,7 +394,7 @@ footer {
     text-align: center;
     margin: auto;
     padding-top: 15px;
-    }
+}
 
 .address {
     margin-top: 25px;
@@ -427,14 +405,14 @@ footer {
 }
 
 /*media queries*/
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
 
     .main_header {
         height: 40%;
     }
 
-    .about_container, .container_2, .kayla_container, .form, .about .about_kayla, .item_5  {
-        font-family: 'cambria';
+    .about_container, .container_2, .kayla_container, .form, .about .about_kayla, .item_5 {
+        font-family: 'cambria', serif;
         font-size: 20px;
     }
 
@@ -447,27 +425,24 @@ footer {
         align-self: center;
         margin-top: 2px;
         width: 75%;
-      
+
     }
-    
+
     .banner {
-        margin: auto;
-        margin-top: 25px;
         color: rgb(90, 88, 88);
         font-size: 23px;
-        font-family: 'cambria';
-        margin: 0 auto;
-        margin-top: .5em;
+        font-family: 'cambria', serif;
+        margin: .5em auto 0;
         text-align: center;
     }
 
     .about {
-        font-family: 'cambria';
+        font-family: 'cambria', serif;
         font-size: 20px;
     }
 
-    .about_container  {
-        font-family: 'cambria';
+    .about_container {
+        font-family: 'cambria', serif;
         flex-direction: row-reverse;
         font-size: 20px;
     }
@@ -483,7 +458,7 @@ footer {
         font-size: 20px;
     }
 
-    .about_kayla{
+    .about_kayla {
         max-width: 55%;
     }
 
@@ -522,7 +497,4 @@ footer {
         font-size: 20px;
         font-weight: normal;
     }
-    
-
 }
-    

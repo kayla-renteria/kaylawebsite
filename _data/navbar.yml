@@ -1,30 +1,30 @@
 navigation:
   - text: Home
-    href: index.html
+    href: /
   - text: About Kayla
-    href: about-kayla.html
+    href: /about-kayla.html
   - text: Counseling Services
     children:
       - text: Trauma Treatment
-        href: trauma.html
+        href: /trauma.html
       - text: Depression and Anxiety
-        href: depression.html
+        href: /depression.html
       - text: Adolescents in Therapy
-        href: adolescents.html
+        href: /adolescents.html
       - text: Telehealth
-        href: telehealth.html
+        href: /telehealth.html
   - text: Supervision and Consultation Services
-    href: supervision-and-consultation.html
+    href: /supervision-and-consultation.html
   - text: Client Resources
     children: 
       - text: FAQ
-        href: faq.html
+        href: /faq.html
       - text: Client Portal
-        href: client-portal.html
+        href: /client-portal.html
       - text: Insurance and Rates
-        href: insurance.html
+        href: /insurance.html
   - text: Contact Me
-    href: hours.html
+    href: /hours.html
   - text: Blog
     href: https://renteriacounseling.blogspot.com/
     options:
