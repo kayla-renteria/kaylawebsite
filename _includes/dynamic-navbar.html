@@ -22,7 +22,7 @@
                     {%- for child in nav-item.children -%}
                     {%- assign options='' -%}
                     {%- if child.options != null and child.options contains 'new-page' -%}
-                    {%- assign options='target="_blank" -%}
+                    {%- assign options='target="_blank"' -%}
                     {%- endif -%}
                     <a class="dropdown-item" {{ options }} href="{{ child.href }}">{{ child.text }}</a>
                     {%- endfor -%}
@@ -36,7 +36,7 @@
             <li class="{{class}}">
                 {%- assign options='' -%}
                 {%- if nav-item.options != null and nav-item.options contains 'new-page' -%}
-                {%- assign options='target="_blank" -%}
+                {%- assign options='target="_blank"' -%}
                 {%- endif -%}
                 <a class="nav-link" {{ options }} href="{{nav-item.href}}">{{nav-item.text}}</a>
             </li>
