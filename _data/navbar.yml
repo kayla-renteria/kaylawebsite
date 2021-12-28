@@ -26,7 +26,7 @@ navigation:
       - text: Insurance and Rates
         href: /insurance.html
   - text: Contact Me
-    href: /hours.html
+    href: /hours-and-location.html
   - text: Blog
     href: https://renteriacounseling.blogspot.com/
     options:

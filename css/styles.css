@@ -11,7 +11,7 @@
     flex-direction: column;
     align-content: center;
     background-size: cover !important;
-    background: url(/images/water700.jpg) no-repeat;
+    background: url(/images/global/water700.jpg) no-repeat;
     border-radius: 5px;
     height: 15%;
 }
@@ -327,7 +327,7 @@ button {
 
 /*footer*/
 footer {
-    background: url(/images/theugly2.jpg) no-repeat;
+    background: url(/images/global/footer-background.jpg) no-repeat;
     background-size: cover;
     max-height: 225px;
     min-height: 75px;
