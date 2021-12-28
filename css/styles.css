@@ -353,6 +353,10 @@ footer {
     margin-top: 25px;
 }
 
+.smallPicture {
+    width: 20vw;
+}
+
 /*media queries*/
 @media (min-width: 1200px) {
 
