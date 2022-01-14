@@ -13,6 +13,8 @@ navigation:
         href: /adolescents.html
       - text: Telehealth
         href: /telehealth.html
+      - text: Animal Assisted Therapy
+        href: /animal-assisted-therapy.html
   - text: Supervision and Consultation Services
     href: /supervision-and-consultation.html
   - text: Client Resources
@@ -24,7 +26,7 @@ navigation:
       - text: Insurance and Rates
         href: /insurance.html
   - text: Contact Me
-    href: /hours.html
+    href: /hours-and-location.html
   - text: Blog
     href: https://renteriacounseling.blogspot.com/
     options:
