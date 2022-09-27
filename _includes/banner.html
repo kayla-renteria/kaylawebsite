@@ -1,4 +1,14 @@
+{% capture currentDate %}{{ 'now' | date: '%s'}}{% endcapture %}
+{% for ad in site.event_advertisements %}
+    {% capture startShowing %}{{ ad.start_showing | date: '%s' }}{% endcapture %}
+    {% capture stopShowing %}{{ ad.stop_showing | date: '%s' }}{% endcapture %}
+    {% if currentDate >= startShowing and currentDate <= stopShowing%}
+        <p>{{ ad.event }}</p>
+    {% endif %}
+{% endfor %}
+
 <div class="banner fade-in" style>
-    <h5 class="banner fade-in" style>Rough waters are inevitable. Here, you'll remain behind the wheel as we navigate the current
+    <h5 class="banner fade-in" style>Rough waters are inevitable. Here, you'll remain behind the wheel as we navigate
+        the current
         together.</h5>
 </div>
