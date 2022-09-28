@@ -1,14 +1,23 @@
-{% capture currentDate %}{{ 'now' | date: '%s'}}{% endcapture %}
+{% assign currentDate = 'now' | date: '%s' %}
 {% for ad in site.event_advertisements %}
-    {% capture startShowing %}{{ ad.start_showing | date: '%s' }}{% endcapture %}
-    {% capture stopShowing %}{{ ad.stop_showing | date: '%s' }}{% endcapture %}
-    {% if currentDate >= startShowing and currentDate <= stopShowing%}
-        <p>{{ ad.event }}</p>
+    {% assign startShowing = null %}
+    {% if ad.start_showing != null %}
+        {% assign startShowing = ad.start_showing | date: '%s' %}
+    {% endif %}
+    
+    {% assign stopShowing = null %}
+    {% if ad.stop_showing != null %}
+        {% assign stopShowing = ad.stop_showing | date: '%s' %}
+    {% endif %}
+
+    {% if startShowing == null or currentDate >= startShowing %}
+        {% if stopShowing == null or currentDate <= stopShowing %}
+            <p>{{ ad.event }}</p>
+        {% endif %}
     {% endif %}
 {% endfor %}
 
 <div class="banner fade-in" style>
     <h5 class="banner fade-in" style>Rough waters are inevitable. Here, you'll remain behind the wheel as we navigate
-        the current
-        together.</h5>
+        the current together.</h5>
 </div>
