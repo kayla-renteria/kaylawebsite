@@ -91,6 +91,10 @@ p, p.intro {
     font-size: 15px;
 }
 
+ul>li {
+    font-size: 20px;
+}
+
 .new {
     display: flex;
     flex-direction: column;
