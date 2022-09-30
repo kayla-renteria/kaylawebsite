@@ -1,4 +1,4 @@
-{% assign currentDate = 'now' | date: '%s' %}
+<!-- {% assign currentDate = 'now' | date: '%s' %}
 {% for ad in site.event_advertisements %}
     {% assign startShowing = null %}
     {% if ad.start_showing != null %}
@@ -15,7 +15,27 @@
             <p>{{ ad.event }}</p>
         {% endif %}
     {% endif %}
-{% endfor %}
+{% endfor %} -->
+<script type="module">
+    import getDataFromExcelSheet from './scripts/excel-interface.js';
+    const now = new Date().getTime();
+    getDataFromExcelSheet('Sheet1', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTOjpzqoWYsVyztxPULkuD0KT5fP3Fmw-DQJjbIQt1O6WG4-v0VaBEtrQ6rwsxIOl70cuEQUM_paHIG/pub?output=xlsx', {cache: { expiry: 0}})
+        .then(data => {
+            data.forEach(event => {
+                const startShowing = event['Start Showing'] ? new Date(event['Start Showing']).getTime() : null;
+                const stopShowing = event['Stop Showing'] ? new Date(event['Stop Showing']).getTime() : null;
+                if ((!startShowing || now >= startShowing) && (!stopShowing || now <= stopShowing)) {
+                    const eventLi = document.createElement("li")
+                    eventLi.innerHTML = event.Text
+                    document.getElementById("events").appendChild(eventLi)
+                }
+             })
+        });
+</script>
+<ul id="events">
+
+</ul>
+
 
 <div class="banner fade-in" style>
     <h5 class="banner fade-in" style>Rough waters are inevitable. Here, you'll remain behind the wheel as we navigate

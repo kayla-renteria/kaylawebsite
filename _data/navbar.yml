@@ -15,6 +15,12 @@ navigation:
         href: /telehealth.html
       - text: Animal Assisted Therapy
         href: /animal-assisted-therapy.html
+  - text: Wellness Services
+    children:
+      - text: Yoga
+        href: /yoga.html
+      - text: Mediation
+        href: /meditation.html
   - text: Supervision and Consultation Services
     href: /supervision-and-consultation.html
   - text: Client Resources
