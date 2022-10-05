@@ -2,8 +2,8 @@
     import getDataFromExcelSheet from '/scripts/excel-interface.js';
     const now = new Date().getTime();
     getDataFromExcelSheet(
-            'https://docs.google.com/spreadsheets/d/e/2PACX-1vTOjpzqoWYsVyztxPULkuD0KT5fP3Fmw-DQJjbIQt1O6WG4-v0VaBEtrQ6rwsxIOl70cuEQUM_paHIG/pub?output=xlsx', 
-            'Sheet1', 
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vSXYB9S0qnklIWpx7QPzV60B3mudjLQDs8nHgQejfMpdHHO65yg1lkcOfPHDtcCsMjBo51rp8elztlE/pub?output=xlsx', 
+            'Announcements', 
             { cache: { expiry: 0 }}
         )
         .then(data => {
