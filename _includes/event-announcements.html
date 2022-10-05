@@ -1,0 +1,34 @@
+<script type="module">
+    import getDataFromExcelSheet from '/scripts/excel-interface.js';
+    const now = new Date().getTime();
+    getDataFromExcelSheet(
+            'https://docs.google.com/spreadsheets/d/e/2PACX-1vTOjpzqoWYsVyztxPULkuD0KT5fP3Fmw-DQJjbIQt1O6WG4-v0VaBEtrQ6rwsxIOl70cuEQUM_paHIG/pub?output=xlsx', 
+            'Sheet1', 
+            { cache: { expiry: 0 }}
+        )
+        .then(data => {
+            if (!data || data.length == 0) {
+                return;
+            }
+
+            const parentDomItem = document.getElementById('events');
+            parentDomItem.setAttribute('style', 'border-radius: 25px; border: 2px solid lightgrey; margin-top: 30px;');
+            
+            const eventHeading = document.createElement('h3');
+            eventHeading.innerHTML = 'Upcoming Events';
+
+            parentDomItem.appendChild(eventHeading);
+
+            data.forEach(event => {
+                const startShowing = event['Start Showing'] ? new Date(event['Start Showing']).getTime() : null;
+                const stopShowing = event['Stop Showing'] ? new Date(event['Stop Showing']).getTime() : null;
+                if ((!startShowing || now >= startShowing) && (!stopShowing || now <= stopShowing)) {
+                    const eventDomItem = document.createElement('p');
+                    eventDomItem.innerHTML = event.Text;
+                    parentDomItem.appendChild(eventDomItem);
+                }
+            })
+        });
+</script>
+
+<div id="events"></div>

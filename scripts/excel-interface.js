@@ -26,7 +26,7 @@ const getWorkbook = (fileName, opts) => {
                 return Promise.resolve(cachedFile.workbook);
             }
             localStorage.removeItem(fileName);
-        } 
+        }
     }
     return axios.get(fileName, {
             responseType: 'blob'
@@ -52,8 +52,11 @@ const getWorkbook = (fileName, opts) => {
         });
 }
 
-const getDataFromExcelSheet = (worksheetName, fileName, opts = {}) => {
-    const mergedOpts = {...defaultOpts, ...opts};
+const getDataFromExcelSheet = (fileName, worksheetName, opts = {}) => {
+    const mergedOpts = {
+        ...defaultOpts,
+        ...opts
+    };
     return getWorkbook(fileName, mergedOpts)
         .then(workbook => XLSX.utils.sheet_to_json(workbook.Sheets[worksheetName]));
 }

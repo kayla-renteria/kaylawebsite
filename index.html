@@ -2,7 +2,10 @@
 
 ---
 <!doctype html>
-
+<!-- <script type="module">
+    import addAnnouncementsToElement from "/scripts/add-events.js";
+    addAnnouncementsToElement();
+</script> -->
 <div class="container_2">
     <div class="about_kayla">
 
@@ -26,6 +29,7 @@
             and if you're ready to make an appointment, you can do so by giving me a call or clicking here:
         </p>
         {%- include request-appointment.html -%}
+        {%- include event-announcements.html -%}
         {%- include social-media.html -%}
 
     </div>
