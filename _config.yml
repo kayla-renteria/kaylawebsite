@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Renteria Counseling Service
-email: kayla@renteriacounseling.com<
+title: Renteria Counseling and Wellness
+email: kayla@renteriacounseling.com
 description: >- # this means to ignore newlines until "baseurl:"
-    Renteria Counseling Services provides outpatient therapy to adults, children, and families
+    Renteria Counseling and Wellness provides outpatient therapy to adults, children, and families
     dealing with a variety of concerns, including depression, anxiety, relationship difficulties,
     stress management, and overcoming the effects of trauma.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -33,6 +33,9 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+collections:
+  - event_advertisements
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

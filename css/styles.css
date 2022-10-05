@@ -10,10 +10,11 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
     background-size: cover !important;
     background: url(/images/global/water700.jpg) no-repeat;
-    border-radius: 5px;
-    height: 15%;
+    /* border-radius: 5px; */
+    height: 10%;
 }
 
 img.logo {
@@ -88,6 +89,10 @@ body {
 
 p, p.intro {
     font-size: 15px;
+}
+
+ul>li {
+    font-size: 20px;
 }
 
 .new {
@@ -361,7 +366,7 @@ footer {
 @media (min-width: 1200px) {
 
     .main_header {
-        height: 40%;
+        height: 30%;
     }
 
     .about_container, .container_2, .kayla_container, .form, .about .about_kayla, .item_5 {

@@ -2,7 +2,10 @@
 
 ---
 <!doctype html>
-
+<!-- <script type="module">
+    import addAnnouncementsToElement from "/scripts/add-events.js";
+    addAnnouncementsToElement();
+</script> -->
 <div class="container_2">
     <div class="about_kayla">
 
@@ -10,20 +13,23 @@
             <img src="/images/index/hand1.jpeg" alt="hand-reaching-out" class="profile">
         </div>
 
-        <h2>About Renteria Counseling</h2>
+        <h2>About Renteria Counseling and Wellness</h2>
         <p class="intro">
-            Renteria Counseling Services provides outpatient therapy to adults, children, and families
+            Renteria Counseling and Wellness provides outpatient therapy to adults, children, and families
             dealing with a variety of concerns, including depression, anxiety, relationship difficulties,
             stress management, and overcoming the effects of trauma.
         </p>
 
         <p>
             I provide counseling services in my office or via telehealth. Therapy services are individualized
-            and tailored to each client's unique needs. I specialize in treating depression, anxiety, and trauma.
+            and tailored to each client's unique needs. I specialize in treating depression, anxiety, and trauma. I also
+            offer a range of wellness services that compliment traditional counseling services, including meditation and
+            yoga workshops, classes, and private sessions.
             I'd love to talk with you about how I can help you or your family. Feel free to explore my website,
             and if you're ready to make an appointment, you can do so by giving me a call or clicking here:
         </p>
         {%- include request-appointment.html -%}
+        {%- include event-announcements.html -%}
         {%- include social-media.html -%}
 
     </div>
