@@ -1,5 +1,13 @@
 <script type="module">
     import getDataFromExcelSheet from '/scripts/excel-interface.js';
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const createLinks = text => {
+        if (!text) {
+            return text;
+        }
+        return text.replace(urlRegex, '<a href="$1">$1</a>')
+    }
+
     const now = new Date().getTime();
     getDataFromExcelSheet(
             'https://docs.google.com/spreadsheets/d/e/2PACX-1vSXYB9S0qnklIWpx7QPzV60B3mudjLQDs8nHgQejfMpdHHO65yg1lkcOfPHDtcCsMjBo51rp8elztlE/pub?output=xlsx', 
@@ -24,7 +32,7 @@
                 const stopShowing = event['Stop Showing'] ? new Date(event['Stop Showing']).getTime() : null;
                 if ((!startShowing || now >= startShowing) && (!stopShowing || now <= stopShowing)) {
                     const eventDomItem = document.createElement('p');
-                    eventDomItem.innerHTML = event.Text;
+                    eventDomItem.innerHTML = createLinks(event.Text);
                     parentDomItem.appendChild(eventDomItem);
                 }
             })
