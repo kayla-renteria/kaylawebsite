@@ -8,6 +8,31 @@
         return text.replace(urlRegex, '<a href="$1">$1</a>')
     }
 
+    const showEvent = (event, time) => {
+        if (!event || !event.Text) {
+            return false;
+        }
+
+        const startShowing = event['Start Showing'] ? new Date(event['Start Showing']).getTime() : null;
+        const stopShowing = event['Stop Showing'] ? new Date(event['Stop Showing']).getTime() : null;
+        return (!startShowing || time >= startShowing) && (!stopShowing || time <= stopShowing)
+    }
+
+    const eventToDomItem = event => {
+        const eventDomItem = document.createElement('p');
+
+        if (!event.Link) {
+            eventDomItem.innerHTML = createLinks(event.Text);
+            return eventDomItem;
+        }
+
+        eventDomItem.innerHTML = `<a href="${event.Link}" target="_blank">${event.Text}</a>`;
+        // eventDomItem.setAttribute("href", event.Link);
+        // eventDomItem.setAttribute("target", "_blank")
+        // eventDomItem.innerHTML = event.Text;
+        return eventDomItem;
+    }
+
     const now = new Date().getTime();
     getDataFromExcelSheet(
             'https://docs.google.com/spreadsheets/d/e/2PACX-1vSXYB9S0qnklIWpx7QPzV60B3mudjLQDs8nHgQejfMpdHHO65yg1lkcOfPHDtcCsMjBo51rp8elztlE/pub?output=xlsx', 
@@ -15,6 +40,7 @@
             { cache: { expiry: 0 }}
         )
         .then(data => {
+            console.debug(data);
             if (!data || data.length == 0) {
                 return;
             }
@@ -28,12 +54,8 @@
             parentDomItem.appendChild(eventHeading);
 
             data.forEach(event => {
-                const startShowing = event['Start Showing'] ? new Date(event['Start Showing']).getTime() : null;
-                const stopShowing = event['Stop Showing'] ? new Date(event['Stop Showing']).getTime() : null;
-                if ((!startShowing || now >= startShowing) && (!stopShowing || now <= stopShowing)) {
-                    const eventDomItem = document.createElement('p');
-                    eventDomItem.innerHTML = createLinks(event.Text);
-                    parentDomItem.appendChild(eventDomItem);
+                if (showEvent) {
+                    parentDomItem.appendChild(eventToDomItem(event));
                 }
             })
         });
