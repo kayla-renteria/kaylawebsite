@@ -21,15 +21,12 @@
     const eventToDomItem = event => {
         const eventDomItem = document.createElement('p');
 
-        if (!event.Link) {
+        if (event.Link) {
+            eventDomItem.innerHTML = `<a href="${event.Link}" target="_blank">${event.Text}</a>`;
+        } else {
             eventDomItem.innerHTML = createLinks(event.Text);
-            return eventDomItem;
         }
 
-        eventDomItem.innerHTML = `<a href="${event.Link}" target="_blank">${event.Text}</a>`;
-        // eventDomItem.setAttribute("href", event.Link);
-        // eventDomItem.setAttribute("target", "_blank")
-        // eventDomItem.innerHTML = event.Text;
         return eventDomItem;
     }
 
