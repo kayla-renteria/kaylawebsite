@@ -359,7 +359,7 @@ footer {
 }
 
 .smallPicture {
-    width: 20vw;
+    width: 90vw;
 }
 
 /*media queries*/
@@ -454,5 +454,9 @@ footer {
     .blue {
         font-size: 20px;
         font-weight: normal;
+    }
+    
+    .smallPicture {
+        width: 20vw;
     }
 }
