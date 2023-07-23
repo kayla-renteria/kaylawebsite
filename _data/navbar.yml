@@ -19,7 +19,7 @@ navigation:
     children:
       - text: Yoga
         href: /yoga.html
-      - text: Mediation
+      - text: Meditation
         href: /meditation.html
   - text: Supervision and Consultation Services
     href: /supervision-and-consultation.html
